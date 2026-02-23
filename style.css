@@ -21,14 +21,100 @@ body {
 }
 
 .header {
-    border-bottom: 1px solid #e5e5e5;
-    padding: 20px 0;
+    border-bottom: 1px solid #a3a3a3;
     position: sticky;
-    top: 0;
     background: white;
     z-index: 100;
+    background-color: var(--header-bg) ; 
+    border-bottom: 1px solid var(--border); 
+    padding: 20px 0;
+    top: 0;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
+body {
+    --bg: #ffffff;
+    --text: #000000;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+body.dark-theme {
+    --header-bg: #121212;
+    --border-color: #333333;
+    --bg: #121212;
+    --text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --header-bg: rgba(18, 18, 18, 0.85); 
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.glass-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    color: var(--text);
+}
+
+.theme-switch {
+    width: 50px;
+    height: 26px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.switch-circle {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.3s;
+}
+
+.dark-theme .theme-switch {
+    background: #333;
+}
+
+.dark-theme .switch-circle {
+    left: 26px;
+    background: #656563;
+}
+
+.product-grid {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -62,6 +148,16 @@ body {
 .hero h1 {
     font-size: 40px;
     margin-bottom: 10px;
+}
+
+body.dark-theme .hero {
+    background: #1e1e1e;
+    color: #ffffff;     
+}
+
+body.dark-theme .btn {
+    background:#656365;
+    color: #292929;
 }
 
 .btn {
