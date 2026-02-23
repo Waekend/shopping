@@ -183,7 +183,7 @@ body.dark-theme .btn {
 .btn {
     font-size: 90%;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 8px 14px;
     background: #343333;
     color: #fff;
     border: none;
@@ -291,4 +291,5 @@ body.dark-theme .btn {
         justify-content: space-around;
     }
 }
+
 
